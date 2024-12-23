@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8; /* 增加行高 */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 1.1em; /* 等比例放大字體 */
+}
+header {
+    background: #004d66;
+    color: #fff;
+    padding: 25px; /* 增加內邊距 */
+    text-align: center;
+    font-size: 2.75em; /* 等比例放大字體 */
+    font-family: 'Georgia', serif;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px; /* 增加內邊距 */
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1.1em; /* 等比例放大字體 */
+}
+h2, h3 {
+    color: #004d66;
+    font-size: 1.5em; /* 等比例放大字體 */
+}
+ul {
+    margin: 15px 0; /* 增加外邊距 */
+    padding-left: 25px; /* 增加內邊距 */
+    font-size: 1.1em; /* 等比例放大字體 */
+}
+.section {
+    margin-bottom: 25px; /* 增加外邊距 */
+}
+footer {
+    text-align: center;
+    padding: 15px; /* 縮小內邊距 */
+    background: #004d66;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    font-size: 1em; /* 保持原來字體大小 */
+    margin: 0; /* 移除外邊距 */
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    padding: 15px; /* 增加內邊距 */
+    z-index: 1000;
+}
+.tooltip img {
+    max-width: 700px; /* 更大尺寸的圖片 */
+    border-radius: 5px;
+}
+.example-btn {
+    background-color: #004d66;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* 增加內邊距 */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em; /* 等比例放大字體 */
+    margin-top: 15px; /* 增加外邊距 */
+}
+.example-btn:hover {
+    background-color: #003d52;
+}
