@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Credit Scoring - Credit Risk Assessment</title>
+    <link rel="stylesheet" href="zetAI.css">
+</head>
+<body>
+    <header>
+        <p>AI Credit Scoring - Credit Risk Assessment</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p><strong>Zest AI</strong> is a fintech company that leverages artificial intelligence to revolutionize credit scoring. Their goals include:</p>
+            <ul>
+                <li>Fraud Detection</li>
+                <li>High Accuracy</li>
+                <li>Automation and Efficiency</li>
+                <li>Fairness & Transparency</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Data Collection & Encoding</h2>
+            <h3>One-Hot Encoding</h3>
+            <p>Converts categorical variables into multiple columns, each represented as 0 or 1. Suitable for a small number of categories but creates many columns if the dataset is large.</p>
+            <button class="example-btn" data-img-src="onehot.png">Example</button>
+            <h3>Binary Encoding</h3>
+            <p>Converts categories into binary values, using fewer columns and avoiding some ordinal issues. However, it can lose intuitive meaning for certain categories.</p>
+            <button class="example-btn" data-img-src="binary.png">Example</button>
+        </div>
+
+        <div class="section">
+            <h2>Meta Variable</h2>
+            <p>Meta-variables represent key information relevant to credit evaluation, simplifying raw data for better model performance. Example variables include:</p>
+            <ul>
+                <li>Income</li>
+                <li>Loan Amount</li>
+                <li>Past Repayment</li>
+                <li>Job Stability</li>
+            </ul>
+            <p>These variables are processed into higher-level data, such as the Loan-to-Income Ratio, to improve efficiency and accuracy.</p>
+        </div>
+
+        <div class="section">
+            <h2>Multiple Models</h2>
+            <h3>Regression Models</h3>
+            <p>Used for binary classification, predicting probabilities (e.g., 0 or 1).</p>
+            <h3>Random Forest Model</h3>
+            <p>Builds decision trees using random subsets, averaging results for better predictions.</p>
+            <h3>CatBoost</h3>
+            <p>Handles categorical and numerical features efficiently, reducing overfitting and manual preprocessing.</p>
+            <button class="example-btn" data-img-src="model.png">ZEST AI'S Model Building</button>
+        </div>
+
+        <div class="section">
+            <h2>Model Performance Measures</h2>
+            <ul>
+                <li><strong>False Positive Rate:</strong> Measures incorrect positive classifications.</li>
+                <li><strong>Accuracy:</strong> Evaluates overall correctness.</li>
+                <li><strong>Elapsed Time:</strong> Assesses processing speed.</li>
+                <li><strong>ROC Curve:</strong> Plots True Positive Rate against False Positive Rate to assess model ability.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Advantages of AI Credit Scoring</h2>
+            <ul>
+                <li><strong>Enhancing Financial Inclusion:</strong> Enables access for people without credit histories.</li>
+                <li><strong>Comprehensive Risk Assessment:</strong> Integrates diverse data like social media and consumer behavior.</li>
+                <li><strong>Improving Loan Efficiency:</strong> Automates loan approvals with reliable outputs.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Future Outlook</h2>
+            <ul>
+                <li>Advancing technology to improve credit scoring.</li>
+                <li>Diversifying data sources for better predictions.</li>
+                <li>Balancing privacy concerns with data analysis.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>by 余芷葳 張昱純 王宸澤 李威翰 </p>
+    </footer>
+
+    <div class="tooltip" id="tooltip">
+        <img id="tooltip-img" src="" alt="Example Image">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.example-btn');
+            const tooltip = document.getElementById('tooltip');
+            const tooltipImg = document.getElementById('tooltip-img');
+
+            buttons.forEach(button => {
+                button.addEventListener('mouseover', function() {
+                    const imgSrc = button.getAttribute('data-img-src');
+                    tooltipImg.src = imgSrc;
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = (button.getBoundingClientRect().left + window.scrollX) + 'px';
+                    tooltip.style.top = (button.getBoundingClientRect().top + window.scrollY + button.offsetHeight) + 'px';
+                });
+
+                button.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
